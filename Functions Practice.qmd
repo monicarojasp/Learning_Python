@@ -1,0 +1,187 @@
+---
+title: "Python Functions"
+format: html
+editor: visual
+---
+
+```{python}
+# Interactions between functions
+
+from random import shuffle
+
+def shuffle_list(mylist):
+  shuffle(mylist)
+  return mylist
+
+mylist = [' ','O',' ']
+
+shuffle_list(mylist)
+
+
+```
+
+```{python}
+
+def player_guess():
+  
+  guess=''
+  
+  while guess not in ['0','1','2']:
+    guess= input("pick a number: 0,1, or 2: ")
+    
+  return int(guess)
+
+player_guess()
+```
+
+```{python}
+
+def check_guess(mylist, guess):
+  if mylist[guess] == 'O':
+    print("correct!")
+  else:
+    print("Oops wrong, try again!")
+    print(mylist)
+```
+
+```{python}
+##Initial list
+
+mylist = [' ','O',' ']
+
+#shuffle list
+
+mixedup_list =  shuffle_list(mylist)
+
+#"User guess"
+
+guess = player_guess()
+
+#Chech guess
+
+check_guess(mixedup_list, guess)
+
+```
+
+```{python}
+
+#Functions #1
+
+def myfunc():
+  print('Hello World') 
+
+myfunc()
+```
+
+```{python}
+
+#Functions #2
+def myfunc(name):
+  print(f'Hello {name}')
+
+
+myfunc("Jose")
+```
+
+```{python}
+
+#Functions #3
+def myfunc(x):
+  if x == True:
+    return 'Hello'
+  else:
+    return 'Goodbye'
+
+myfunc(3<2)
+```
+
+```{python}
+
+#Functions #4
+def myfunc(x,y,z):
+  if z == True:
+    return x
+  else:
+    return y
+  
+```
+
+```{python}
+
+#Functions #5
+def myfunc(a, b):
+  return (a+b)
+
+```
+
+```{python}
+
+#Functions #6
+def is_even(a):
+  if a % 2 == 0:
+    return True
+  else:
+    return False
+
+```
+
+```{python}
+
+#Functions #7
+def is_greater(a, b):
+  if a > b:
+    return True
+  else:
+    return False
+  
+is_greater(5, 3)
+
+```
+
+```{python}
+
+#Functions #8
+
+def myfunc(*args):
+  return sum(args)
+
+myfunc(1,2,3,4,5)
+```
+
+```{python}
+
+#Functions #9
+
+def myfunc(*args):
+  
+  output = [ ]
+  
+  for num in args:
+    if num % 2 == 0:
+      output.append(num)
+    else:
+      pass
+  return output
+
+
+myfunc(5,6,7,8)
+```
+
+```{python}
+
+#Functions #10
+ 
+def myfunc(x):
+  
+  output = ""
+  
+  for letter in range(len(x)):
+    if letter % 2 == 1:
+      output += x[letter].upper()
+    else:
+      output += x[letter].lower()
+  return output
+
+myfunc('Anthropomorphism')
+  
+```

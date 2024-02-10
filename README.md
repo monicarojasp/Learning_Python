@@ -1,2 +1,2 @@
 # Learning_Python
-Practice code
+Projects and exercises to practice Python
